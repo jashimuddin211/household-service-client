@@ -9,6 +9,9 @@ import Services from './component/pages/Services';
 import AddServices from './component/pages/AddServices';
 import Bookings from './component/pages/Bookings';
 import Login from './component/pages/Login';
+import AuthProvider from './context/AuthProvider';
+import Register from './component/pages/Register';
+import Profile from './component/Profile.jsx/Profile';
 
 
 
@@ -35,7 +38,13 @@ const router = createBrowserRouter([
     },{
       path:'/login',
       Component:Login,
-    },
+    },{
+      path:'/register',
+      Component:Register,
+    },{
+      Path:'/profile',
+      Component:Profile,
+    }
     
    ]
  },
@@ -43,6 +52,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )
