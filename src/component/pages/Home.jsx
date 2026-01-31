@@ -1,4 +1,5 @@
 import React from 'react';
+import Number from '../number/Number';
 
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
             
             <h1>home</h1>
+            <Number></Number>
         </div>
     );
 };
