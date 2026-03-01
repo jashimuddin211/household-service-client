@@ -3,6 +3,8 @@ import Number from '../number/Number';
 
 
 import ProcessSection from '../ProcessesSection/ProcessesSection';
+import Slider from './Home/Swiper';
+import Services from './Services/Services';
 
 
 const Home = () => {
@@ -10,9 +12,13 @@ const Home = () => {
         <div className='bg-gradient-to-b from-white to-orange-50'>
             
             
-            <h1>home</h1>
+        
+
+            <Slider></Slider>
             
                 <ProcessSection></ProcessSection>
+                <Services></Services>
+                
             
             <Number></Number>
         </div>
