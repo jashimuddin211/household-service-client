@@ -69,7 +69,7 @@ const { user, handleSignOut } = useContext(AuthContext);
                 <li onClick={handleSignOut}>
                   <a>Logout</a>
                 </li>
-                <Link to='/profile'>My Profile</Link>
+                <NavLink to='/profile'>My Profile</NavLink>
               </ul>
             </div>
           ) : (
