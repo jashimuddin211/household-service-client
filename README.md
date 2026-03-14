@@ -1,16 +1,190 @@
-# React + Vite
+#  HomeHero – Local Household Service Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HomeHero is a modern web application that helps users find trusted local household service providers such as electricians, plumbers, cleaners, and more. Users can explore services, book appointments, and leave ratings, while service providers can add, update, and manage their services easily.
 
-Currently, two official plugins are available:
+ **Live Site:** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-  **Browse Local Services**  
+  Users can explore a variety of local household services displayed in a clean card layout.
+
+- **Booking System**  
+  Customers can book services through a booking modal and manage bookings from the *My Bookings* page.
+
+- **Service Provider Dashboard**  
+  Providers can add, update, and delete their services from the *My Services* page.
+
+-  **Rating & Review System**  
+  Users can leave ratings for services they have booked, and the top-rated services appear on the homepage.
+
+-  **Secure Authentication**  
+  Firebase authentication with Email/Password login and Google login option.
+
+---
+
+## 🖥️ Tech Stack
+
+### Frontend
+- React
+- React Router
+- Tailwind CSS
+- DaisyUI
+- Framer Motion
+- React Hot Toast / SweetAlert2
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+
+### Authentication
+- Firebase Authentication
+
+### Deployment
+- Client: Netlify / Firebase / Surge  
+- Server: Vercel
+
+---
+
+##  Responsive Design
+
+The application is fully responsive and optimized for:
+
+-  Mobile devices
+-  Tablets
+-  Desktop screens
+
+---
+
+##  Main Functionalities
+
+###  Home Page
+- Hero slider with at least **3 slides**
+- Dynamic section showing **6 services from the database**
+- Animation using **Framer Motion**
+- Two additional custom sections 
+
+---
+
+###  Authentication System
+
+#### Login
+- Email & Password login
+- Google login
+- Error and success messages via **Toast**
+
+#### Register
+- Name
+- Email
+- Photo URL
+- Password with validation:
+  - Minimum **6 characters**
+  - At least **one uppercase letter**
+  - At least **one lowercase letter**
+
+---
+
+###  User Profile
+
+Users can view their profile information including:
+
+- Name
+- Email
+- Photo
+- Last login time
+
+Users can also **update their name and profile image**.
+
+---
+
+##  CRUD Operations
+
+### Service Providers
+
+####  Add Service
+Providers can add a new service with:
+- Service Name
+- Category
+- Price
+- Description
+- Image URL
+- Provider Name
+- Provider Email
+
+Data is stored in **MongoDB Services Collection**.
+
+---
+
+#### My Services
+Providers can view all services they created in a **table format**.
+
+Actions available:
+-  Update service
+-  Delete service
+
+---
+
+### Customers
+
+####  Service List
+Displays all services in **card format** with:
+- Image
+- Service Name
+- Price
+- Details button
+
+---
+
+####  Service Details
+Shows full service information including:
+
+- Service description
+- Provider information
+- Price
+- Reviews
+- **Book Now button**
+
+---
+
+###  Booking System
+
+Clicking **Book Now** opens a modal containing:
+
+- Service information
+- Booking form
+
+Booking data stored in **Bookings Collection**.
+
+Fields include:
+
+- userEmail
+- serviceId
+- bookingDate
+- price
+
+---
+
+###  My Bookings
+
+Users can view all booked services in a **table format**.
+
+Features:
+- Booking details
+- Cancel booking option (DELETE)
+
+---
+
+##  Database Structure
+
+### Services Collection
+Stores all service listings.
+
+
+
+
+
