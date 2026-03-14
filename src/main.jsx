@@ -6,12 +6,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './Layout/Root';
 import Home from './component/pages/Home';
 import Services from './component/pages/Services';
-import AddServices from './component/pages/AddServices';
+
 import Bookings from './component/pages/Bookings';
 import Login from './component/pages/Login';
 import AuthProvider from './context/AuthProvider';
 import Register from './component/pages/Register';
 import Profile from './component/Profile.jsx/Profile';
+import PrivateRoute from './Routes.jsx/PrivateRoute';
+import AddService from './component/pages/AddServices';
+
 
 
 
@@ -23,6 +26,7 @@ const router = createBrowserRouter([
    children:[
     {
       index:true,
+
       Component:Home,
     },
     {
@@ -31,7 +35,9 @@ const router = createBrowserRouter([
     },
     {
       path:'/add-service',
-      Component:AddServices,
+      element:(<PrivateRoute>
+        <AddService></AddService>
+      </PrivateRoute>)
     },
     {
       path:'/bookings',
