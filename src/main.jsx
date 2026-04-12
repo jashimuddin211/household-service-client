@@ -11,9 +11,11 @@ import Bookings from './component/pages/Bookings';
 import Login from './component/pages/Login';
 import AuthProvider from './context/AuthProvider';
 import Register from './component/pages/Register';
-import Profile from './component/Profile.jsx/Profile';
+
 import PrivateRoute from './Routes.jsx/PrivateRoute';
 import AddService from './component/pages/AddServices';
+import Profile from './component/Profile.jsx/Profile';
+
 
 
 
@@ -49,8 +51,8 @@ const router = createBrowserRouter([
       path:'/register',
       Component:Register,
     },{
-      Path:'/profile',
-      Component:Profile,
+      path:'/profile',
+      element:<Profile></Profile>,
     }
     
    ]
