@@ -5,7 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import Root from './Layout/Root';
 import Home from './component/pages/Home';
-import Services from './component/pages/Services';
+
 
 import Bookings from './component/pages/Bookings';
 import Login from './component/pages/Login';
@@ -15,6 +15,8 @@ import Register from './component/pages/Register';
 import PrivateRoute from './Routes.jsx/PrivateRoute';
 import AddService from './component/pages/AddServices';
 import Profile from './component/Profile.jsx/Profile';
+import AllServices from './component/pages/AllServices';
+import ServicesDetails from './component/pages/Services/ServicesDetails';
 
 
 
@@ -33,7 +35,11 @@ const router = createBrowserRouter([
     },
     {
       path:'service',
-      Component:Services,
+      Component:AllServices,
+    },
+    {
+      path:'serviceDetails/:id',
+      Component:ServicesDetails,
     },
     {
       path:'/add-service',
