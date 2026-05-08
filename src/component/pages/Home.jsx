@@ -14,7 +14,9 @@ const Home = () => {
             
         
 
-            <Slider></Slider>
+            <div className='p-8'>
+                <Slider></Slider>
+            </div>
             
                 <ProcessSection></ProcessSection>
                 <Services></Services>
