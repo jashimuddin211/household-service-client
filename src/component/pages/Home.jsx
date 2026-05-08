@@ -5,6 +5,7 @@ import Number from '../number/Number';
 import ProcessSection from '../ProcessesSection/ProcessesSection';
 import Slider from './Home/Swiper';
 import Services from './Services/Services';
+import LimitedCard from './Home/limitedCard';
 
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
             </div>
             
                 <ProcessSection></ProcessSection>
-                <Services></Services>
+                <LimitedCard></LimitedCard>
                 
             
             <Number></Number>
