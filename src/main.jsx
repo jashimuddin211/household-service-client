@@ -17,6 +17,7 @@ import AddService from './component/pages/AddServices';
 import Profile from './component/Profile.jsx/Profile';
 import AllServices from './component/pages/AllServices';
 import ServicesDetails from './component/pages/Services/ServicesDetails';
+import MyServices from './component/navbar/MyServices';
 
 
 
@@ -49,7 +50,9 @@ const router = createBrowserRouter([
     },
     {
       path:'/bookings',
-      Component:Bookings,
+      element:(<PrivateRoute>
+        <Bookings></Bookings>
+      </PrivateRoute>),
     },{
       path:'/login',
       Component:Login,
@@ -59,6 +62,12 @@ const router = createBrowserRouter([
     },{
       path:'/profile',
       element:<Profile></Profile>,
+    },
+    {
+      path:"/myservices",
+     element: (<PrivateRoute>
+        <MyServices></MyServices>
+      </PrivateRoute>),
     }
     
    ]

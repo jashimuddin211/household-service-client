@@ -9,4 +9,4 @@ const AllServices = () => {
     );
 };
 
-export default AllServices;<h1>all services</h1>
+export default AllServices;

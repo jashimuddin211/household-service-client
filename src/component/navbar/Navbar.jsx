@@ -26,6 +26,10 @@ const { user, handleSignOut } = useContext(AuthContext);
             <NavLink to="/" className={navLinkClass}>
               Home
             </NavLink>
+            <NavLink to="/myservices" className={navLinkClass}>
+              My Services
+            </NavLink>
+
 
             <NavLink to="/service" className={navLinkClass}>
               Services

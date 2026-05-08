@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 const ServicesDetails = () => {
 
-  const { id } = useParams(); // ✅ get id from URL
+  const { id } = useParams(); 
   const [service, setService] = useState(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const ServicesDetails = () => {
       .catch(err => console.error("Error:", err));
   }, [id]);
 
-  // ✅ loading state
+  
   if (!service) {
     return (
       <div className="text-center mt-10 text-xl font-semibold">
