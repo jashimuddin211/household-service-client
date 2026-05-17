@@ -18,6 +18,7 @@ import Profile from './component/Profile.jsx/Profile';
 import AllServices from './component/pages/AllServices';
 import ServicesDetails from './component/pages/Services/ServicesDetails';
 import MyServices from './component/navbar/MyServices';
+import UpdateService from './component/navbar/UpdateService';
 
 
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
      element: (<PrivateRoute>
         <MyServices></MyServices>
       </PrivateRoute>),
+    },
+    {
+      path:'/updateService/:id',
+      Component:UpdateService,
     }
     
    ]
