@@ -21,7 +21,7 @@ const AddService = () => {
       providerImage: user?.photoURL,
     };
 
-    // Replace this with your actual fetch/axios call to your backend
+    
     console.log("New Service Data:", serviceData);
 
     
