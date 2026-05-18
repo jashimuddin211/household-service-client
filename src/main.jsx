@@ -19,6 +19,7 @@ import AllServices from './component/pages/AllServices';
 import ServicesDetails from './component/pages/Services/ServicesDetails';
 import MyServices from './component/navbar/MyServices';
 import UpdateService from './component/navbar/UpdateService';
+import Error from './component/pages/Error/Error';
 
 
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
  {
    path: "/",
    Component:Root ,
+   errorElement:<Error></Error>,
    children:[
     {
       index:true,
