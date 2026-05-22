@@ -11,7 +11,7 @@ const Profile = () => {
   const [error, setError] = useState("");
   const [isDataLoaded, setIsDataLoaded] = useState(false);
 
-  // ✅ FIXED: set initial data only once (no overwrite)
+  //  FIXED: set initial data only once (no overwrite)
   useEffect(() => {
     if (user && !isDataLoaded) {
       setName(user.displayName || "");
@@ -20,17 +20,17 @@ const Profile = () => {
     }
   }, [user, isDataLoaded]);
 
-  // ⏳ Wait for Firebase
+  //  Wait for Firebase
   if (loading) {
     return <h2 className="text-center mt-10">Loading...</h2>;
   }
 
-  // 🔐 If not logged in
+  //  If not logged in
   if (!user) {
     return <h2 className="text-center mt-10">Please login first</h2>;
   }
 
-  // ✅ Update profile
+  //  Update profile
   const handleUpdateProfile = (e) => {
     e.preventDefault();
     setError("");
@@ -41,9 +41,9 @@ const Profile = () => {
       photoURL: photoURL,
     })
       .then(() => {
-        setSuccess("✅ Profile updated successfully");
+        setSuccess(" Profile updated successfully");
 
-        // 🔥 optional: refresh UI
+        //  optional: refresh UI
         setIsDataLoaded(false); // re-sync updated data
       })
       .catch((err) => {
@@ -55,7 +55,7 @@ const Profile = () => {
     <div className="min-h-screen bg-base-200 py-10 px-4">
       <div className="max-w-lg mx-auto bg-white p-6 rounded-2xl shadow-lg">
 
-        {/* 👤 Profile Info */}
+        {/*  Profile Info */}
         <div className="text-center">
           <img
             src={user?.photoURL || "https://i.ibb.co/2kR0K5f/user.png"}
@@ -74,7 +74,7 @@ const Profile = () => {
           </p>
         </div>
 
-        {/* ✏️ Update Form */}
+        {/* Update Form */}
         <form onSubmit={handleUpdateProfile} className="mt-8 space-y-4">
 
           <div>
@@ -105,14 +105,14 @@ const Profile = () => {
             Save Changes
           </button>
 
-          {/* ✅ Success */}
+          {/*  Success */}
           {success && (
             <p className="text-green-600 text-center font-medium">
               {success}
             </p>
           )}
 
-          {/* ❌ Error */}
+          {/*  Error */}
           {error && (
             <p className="text-red-600 text-center">
               {error}

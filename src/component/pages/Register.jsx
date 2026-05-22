@@ -12,7 +12,7 @@ const Register = () => {
 
   
 
-  // 🔹 Google Sign In
+  // Google Sign In
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then(result => {
@@ -23,7 +23,7 @@ const Register = () => {
       });
   };
 
-  // 🔹 Email & Password Register
+  // Email & Password Register
   const handleRegister = (e) => {
     e.preventDefault();
     setError('');
@@ -33,7 +33,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // 🔐 Password validation
+    //  Password validation
     if (password.length < 6) {
       toast.error("Password must be at least 6 characters long");
       return;

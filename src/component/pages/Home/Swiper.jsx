@@ -45,7 +45,7 @@ const Slider = () => {
     setCurrent((current - 1 + slides.length) % slides.length);
   };
 
-  // 🔁 Auto Slide
+  //  Auto Slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);

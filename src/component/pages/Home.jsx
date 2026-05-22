@@ -8,6 +8,7 @@ import Services from './Services/Services';
 import LimitedCard from './Home/limitedCard';
 
 
+
 const Home = () => {
     return (
         <div className='bg-gradient-to-b from-white to-orange-50'>
@@ -18,6 +19,7 @@ const Home = () => {
             <div className='p-8'>
                 <Slider></Slider>
             </div>
+            
             
                 <ProcessSection></ProcessSection>
                 <LimitedCard></LimitedCard>
