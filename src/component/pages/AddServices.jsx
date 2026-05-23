@@ -25,7 +25,7 @@ const AddService = () => {
     console.log("New Service Data:", serviceData);
 
     
-    fetch('http://localhost:3000/household', {
+    fetch('https://household-service-database.vercel.app/household', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(serviceData)

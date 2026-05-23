@@ -54,7 +54,7 @@ const ServicesDetails = () => {
       price: service.price,
     };
 
-    fetch('http://localhost:3000/bookings', {
+    fetch('https://household-service-database.vercel.app/bookings', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(bookingInfo),

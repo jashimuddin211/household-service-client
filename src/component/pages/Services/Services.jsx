@@ -16,7 +16,7 @@ const Services = () => {
   
   useEffect(() => {
 
-    let url = 'http://localhost:3000/household';
+    let url = 'https://household-service-database.vercel.app/household';
 
     // Price filter query
     if (minPrice || maxPrice) {

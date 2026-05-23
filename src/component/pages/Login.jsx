@@ -21,7 +21,7 @@ const Login = () => {
     const password = e.target.password.value;
 
     singInUser(email, password)
-      .then((result) => {
+      .then(() => {
         e.target.reset();
         navigate(from, { replace: true });
       })

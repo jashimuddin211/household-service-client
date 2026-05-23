@@ -27,7 +27,7 @@ const Bookings = () => {
 
     if (!user?.email) return;
 
-    fetch(`http://localhost:3000/bookings/${user.email}`)
+    fetch(`https://household-service-database.vercel.app/bookings/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
@@ -151,7 +151,7 @@ const Bookings = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-indigo-50 to-pink-50 py-10 px-4">
+    <div className="min-h-screen .bg-gradient-to-br from-slate-100 via-indigo-50 to-pink-50 py-10 px-4">
 
       <div className="max-w-7xl mx-auto">
 
@@ -160,7 +160,7 @@ const Bookings = () => {
 
           <div className="flex justify-center mb-4">
 
-            <div className="bg-gradient-to-r from-indigo-600 to-pink-600 p-4 rounded-2xl shadow-lg">
+            <div className=".bg-gradient-to-r from-indigo-600 to-pink-600 p-4 rounded-2xl shadow-lg">
 
               <ClipboardList className="text-white" size={35} />
 
@@ -168,7 +168,7 @@ const Bookings = () => {
 
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-extrabold .bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
 
             My Bookings
 
@@ -217,7 +217,7 @@ const Bookings = () => {
               <table className="table">
 
                 {/* Table Head */}
-                <thead className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white text-base">
+                <thead className=".bg-gradient-to-r from-indigo-600 to-pink-600 text-white text-base">
 
                   <tr>
                     <th>#</th>
@@ -334,7 +334,7 @@ const Bookings = () => {
                 >
 
                   {/* Top Gradient */}
-                  <div className="bg-gradient-to-r from-indigo-600 to-pink-600 p-5 text-white">
+                  <div className=".bg-gradient-to-r from-indigo-600 to-pink-600 p-5 text-white">
 
                     <div className="flex justify-between items-center">
 
