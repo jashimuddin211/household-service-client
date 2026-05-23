@@ -7,7 +7,7 @@ const LimitedCard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:3000/household')
+    fetch('https://household-service-database.vercel.app/household')
       .then(res => res.json())
       .then(result => {
         setData(result);

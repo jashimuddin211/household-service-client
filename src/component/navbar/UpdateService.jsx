@@ -14,7 +14,7 @@ const UpdateService = () => {
   // load existing data
   useEffect(() => {
 
-    fetch(`http://localhost:3000/household/${id}`)
+    fetch(`https://household-service-database.vercel.app/household/${id}`)
       .then(res => res.json())
       .then(data => {
         setService(data);

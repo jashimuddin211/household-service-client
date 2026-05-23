@@ -24,7 +24,7 @@ const MyServices = () => {
     if (!user?.email) return;
 
     // fetch only logged-in provider services
-    fetch(`http://localhost:3000/household/provider/${user.email}`)
+    fetch(`https://household-service-database.vercel.app/household/provider/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
@@ -74,20 +74,20 @@ const MyServices = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-purple-50 to-indigo-100 py-10 px-4">
+    <div className="min-h-screen .bg-gradient-to-br from-slate-100 via-purple-50 to-indigo-100 py-10 px-4">
 
-      <div className="max-w-[1280px] mx-auto">
+      <div className=".max-w-[1280px] mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-10">
 
           <div className="flex justify-center mb-4">
-            <div className="bg-gradient-to-r from-indigo-600 to-pink-600 p-4 rounded-2xl shadow-lg">
+            <div className=".bg-gradient-to-r from-indigo-600 to-pink-600 p-4 rounded-2xl shadow-lg">
               <Briefcase className="text-white" size={35} />
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-extrabold .bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
             My Services
           </h1>
 
@@ -122,7 +122,7 @@ const MyServices = () => {
               <table className="table">
 
                 {/* table head */}
-                <thead className="bg-gradient-to-r from-indigo-600 to-pink-600 text-white text-base">
+                <thead className=".bg-gradient-to-r from-indigo-600 to-pink-600 text-white text-base">
                   <tr>
                     <th>No</th>
                     <th>Image</th>

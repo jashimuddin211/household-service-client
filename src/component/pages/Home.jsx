@@ -11,7 +11,7 @@ import LimitedCard from './Home/limitedCard';
 
 const Home = () => {
     return (
-        <div className='bg-gradient-to-b from-white to-orange-50'>
+        <div className='.bg-gradient-to-b from-white to-orange-50'>
             
             
         
