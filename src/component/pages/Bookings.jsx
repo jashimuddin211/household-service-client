@@ -52,7 +52,7 @@ const Bookings = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/bookings/${id}`, {
+    fetch(`https://household-service-database.vercel.app/bookings/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())
@@ -112,7 +112,7 @@ const Bookings = () => {
 
 
 
-    fetch(`http://localhost:3000/services/review/${selectedService}`, {
+    fetch(`https://household-service-database.vercel.app/services/review/${selectedService}`, {
 
       method: 'PATCH',
 

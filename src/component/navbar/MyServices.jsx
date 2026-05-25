@@ -48,7 +48,7 @@ const MyServices = () => {
 
   // delete service
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/household/${id}`, {
+    fetch(`https://household-service-database.vercel.app/household/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

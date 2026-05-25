@@ -44,7 +44,7 @@ const UpdateService = () => {
 
 
 
-    fetch(`http://localhost:3000/household/${id}`, {
+    fetch(`https://household-service-database.vercel.app/household/${id}`, {
 
       method: 'PUT',
 
