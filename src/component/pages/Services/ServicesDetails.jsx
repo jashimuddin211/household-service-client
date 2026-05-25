@@ -19,17 +19,61 @@ const ServicesDetails = () => {
   const { user } = useAuth();
 
   const [service, setService] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Load service
   useEffect(() => {
+    setLoading(true);
+    setError(null);
     fetch(`https://household-service-database.vercel.app/household/${id}`)
-      .then(res => res.json())
-      .then(data => setService(data))
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch service details from server.");
+        }
+        return res.json();
+      })
+      .then(data => {
+        setService(data);
+        setLoading(false);
+      })
       .catch(err => {
         console.error(err);
+        setError("Failed to load service details. Please check your internet connection or try again.");
+        setLoading(false);
         toast.error("Failed to load service");
       });
   }, [id]);
+
+  // Loading
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[60vh]">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    );
+  }
+
+  // Error
+  if (error) {
+    return (
+      <div className="flex flex-col justify-center items-center min-h-[60vh] gap-4 px-4 text-center">
+        <div className="bg-white p-8 rounded-3xl shadow-2xl max-w-md border border-red-100 text-center">
+          <div className="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-3xl">
+            !
+          </div>
+          <h3 className="text-2xl md:text-3xl font-extrabold text-gray-800 mb-2">Fetching Failed</h3>
+          <p className="text-gray-600 mb-6">{error}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="btn btn-error text-white rounded-2xl px-8 py-3 w-full font-bold shadow-lg hover:shadow-xl transition duration-300"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   // CHECK OWNER (IMPORTANT)
   const isOwner = user?.email === service?.providerEmail;
